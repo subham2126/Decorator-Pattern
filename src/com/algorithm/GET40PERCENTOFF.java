@@ -8,6 +8,6 @@ public class GET40PERCENTOFF extends OFFERS {
     }
     @Override
     public int getDiscountedSum() {
-        return (int)(this.totalSum * 0.4);
+        return (int)(this.totalSum-this.totalSum * 0.4);
     }
 }
