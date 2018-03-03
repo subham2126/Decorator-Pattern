@@ -11,13 +11,13 @@ public class Main {
 
          @Override
            public void run(){
-              System.out.println("FC");
+
              COUPONFACTORY couponfactory = new COUPONFACTORY(new GET40PERCENTOFF(totalSum));
              OFFERS offers = couponfactory.getBestCoupon();
              System.out.println(offers.getDescription());
              System.out.println(offers.getDiscountedSum());
 
-             System.out.println("FC2");
+
 
          }
 
@@ -32,9 +32,9 @@ public class Main {
 //        offers = new OFF200(new GET50PERCENTOFF(2000));
 //        System.out.println(offers.getDiscountedSum());
 //        System.out.println(offers.getDescription());
-        CustomThread ct = new CustomThread();
+        CustomThread ct = new CustomThread(3000);
 
-        CustomThread ct2 = new CustomThread();
+        CustomThread ct2 = new CustomThread(3500);
         ct.start();
         ct2.start();
 
